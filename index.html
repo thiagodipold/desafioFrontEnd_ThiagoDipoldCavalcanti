@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Desafio Front End</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Desafio de Front End da Level Up! Games - Criando uma consulta de CEP.">
+        <meta name="author" content="Thiago Dipold Cavalcanti">
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body class="body">
+        <header class="header header--theme-red">
+            <div class="header__menu">
+                <div class="header__logo">
+                    <h1 class="header__logo--style">Buscar CEP</h1>
+                </div>
+
+                <nav class="header__menu__navigation">
+                    <ul class="header__menu__navigation--list">
+                        <li class="header__menu__navigation--items"><a href="#">CSS</a></li>
+                        <li class="header__menu__navigation--items"><a href="#">Componentes</a></li>
+                        <li class="header__menu__navigation--items"><a href="#">Javascript</a></li>
+                        <li class="header__menu__navigation--items"><a href="#">HTML</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="container__form">
+                <h2 class="container--title">Digite um CEP</h2>
+                <p class="container--text">Digite abaixo para consultar um Código de Endereçamento Postal (CEP) do Brasil:</p>
+                
+                <form id="formSearch" method="get" action="."></form>
+                
+                    <label for="form__items__input-effect" class="form__items__input-effect form__items">
+                        <input class="form__items" name="cep" type="text" id="cep" size="10" maxlength="9" placeholder="&nbsp;">
+                        <span class="label">CEP</span>
+                        <span class="focus-bg"></span>
+                    </label>
+                    <button class="form__button form__items" id="buttonSearch">Buscar</button>
+                    <p><a href="#" id="consultarCEP">Não sei meu CEP</a></p>
+                    <div class="container__form__consulta">
+                        <label> Estado
+                        <select id="estado" class="form__items--select form__items" name="estado">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select></label><br/>
+                        <label for="form__items__input-effect" class="form__items__input-effect">
+                            <input class="form__items" name="cidade" type="text" id="cidade" size="40" placeholder="&nbsp;">
+                            <span class="label">Cidade</span>
+                            <span class="focus-bg"></span>
+                        </label>
+
+                        <label for="form__items__input-effect" class="form__items__input-effect form__items">
+                            <input class="form__items" name="rua" type="text" id="rua" size="60" placeholder="&nbsp;">
+                            <span class="label">Logradouro completo (Ex.: Rua Augusta)</span>
+                            <span class="focus-bg"></span>
+                        </label>
+
+                        <button class="form__button form__items" id="buttonSearchCEP">Consultar</button>
+                    </div>
+                    
+                  </form>
+                  
+                  <div class="container__historic-search">
+                      <h3 class="container__historic-search--title">Histórico de busca</h3>
+                      <div class="container__historic-search--list"></div>
+                  </div>
+            </div>
+
+            <div class="container__map">
+                <span class="container__map__close">&#10006;</span>
+                <div class="container__map__addres">
+                    <h2 class="container--title" id="ruaBusca"></h2>
+                    <p class="container--text" id="bairro"></p>
+                    <p class="container--text" id="cidadeBusca"><span id="ufBusca"></span></p>
+                    <p class="container--text" id="cepBusca"></p>
+                </div>
+                <iframe class="map--style"></iframe>
+                <div class="container--new-search"></div>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="assets/scripts/scripts.js"></script>
+    </body>
+</html>

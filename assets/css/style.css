@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url(../fonts/metropolis-regular-webfont.woff) format('truetype') font-weight-normal,
+        url(../fonts/metropolis-light-webfont.woff) format('truetype') font-weight-light,
+        url(../fonts/metropolis-black-webfont.woff) format('truetype') font-weight-black;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Medium.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    max-width: 100%;
+    background-color: rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 2px solid rgba(0,0,0,0.15);
+    padding: 0 15px;
+}
+
+.header--theme-red{
+    color: #f00;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo--style{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header__menu__navigation--list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.header__menu__navigation--items{
+    font-size: 15px;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    grid-gap: 15px;
+    align-items: center;
+}
+
+.container__map{
+    max-width: 100%;
+    min-height: calc(100vh - 93px);
+    height: auto;
+    border: 5px solid #f00;
+    padding: 15px;
+}
+
+.container__map__close{
+    font-size: 18px;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+.container__map__close--hidden{
+    display: block;
+}
+
+.map--style{
+    width: 100%;
+    height: 300px;
+    border: none;
+    padding-right: 15px;
+}
+
+.container--title{
+    font-size: 28px;
+    color: #f00;
+    font-weight: 900;
+}
+
+.container--text{
+    line-height: 1.2;
+    color: #777;
+}
+
+.container--new-search{
+    margin: 15px 0;
+}
+
+.container__form__consulta{
+    display: none;
+}
+
+.container__form__consulta--enabled{
+    display: block;
+}
+
+.container__historic-search--title{
+    display: none;
+    color: #f00;
+}
+
+.container__historic-search--visible{
+    display: block;
+}
+
+.form__items{
+    width: 100%;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.form__items--select{
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+.form__items--disable{
+    color: rgba(0,0,0,0.2) !important;
+}
+
+.form__button{
+    background-color: #f00;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #f00;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form__button:hover{
+    background-color: #fff;
+    color: #f00;
+}
+
+.form__button--disabled, .form__button--disabled:hover{
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.2);
+    cursor: auto;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.form__items__input-effect {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    display: block;
+}
+
+.form__items__input-effect .label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.form__items__input-effect .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+}
+
+.form__items__input-effect input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+            appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+.form__items__input-effect input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form__items__input-effect input:not(:placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+            transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.form__items__input-effect input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #f00;
+}
+
+.form__items__input-effect input:focus + .label {
+    color: #f00;
+    -webkit-transform: translate3d(0, -12px, 0) scale(0.75);
+            transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.form__items__input-effect input:focus + .label + .focus-bg {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+    .header__menu__navigation--list{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .container{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
